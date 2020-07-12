@@ -18,18 +18,9 @@ A Wordpress plugin that adds a Glutenberg block for smash.gg
 6. ???
 7. Profit!
 
-## Stuff that's been added so far
-* Basic plugin info and whatnot
-* Settings (although it's pretty scuffed)
-* The block itself (although it's pretty scuffed)
-
-## Stuff that needs to be done
-* Proper saving of the block
-* POST/GET requests to smash.gg's API
-* Actual output of the request
-* Stylization of said output
-* Possibly dynamic requests (?)
-* **Basically everything.**
+## Roadmap
+[Roadmap hosted on Trello](https://trello.com/b/9y2OUj8w/smashgg-wp-plugin-roadmap)
+*Why?* Because it's a much better way of organizing progress instead of logging it in a README file.
 
 ## License
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
