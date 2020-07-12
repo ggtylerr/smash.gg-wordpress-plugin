@@ -20,6 +20,7 @@ A Wordpress plugin that adds a Glutenberg block for smash.gg
 
 ## Roadmap
 [Roadmap hosted on Trello](https://trello.com/b/9y2OUj8w/smashgg-wp-plugin-roadmap)
+
 *Why?* Because it's a much better way of organizing progress instead of logging it in a README file.
 
 ## License
