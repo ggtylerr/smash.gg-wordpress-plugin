@@ -1,7 +1,6 @@
 // Register block type (title, icon, category, etc)
 
 var el = wp.element.createElement;
-var InspectorControls = wp.blockEditor.InspectorControls;
 
 wp.blocks.registerBlockType('smash-gg-plugin/smash-block', {
 	title: 'smash.gg',
@@ -14,32 +13,26 @@ wp.blocks.registerBlockType('smash-gg-plugin/smash-block', {
 // Register edit and save functions
   
 	edit: function( props ) {
-		var match = props.attributes.match;
-
-		function onChangeMatch(event) {
-			props.setAttributes({match: event.target.value});
+		var updateVal = function(val) {
+			props.setAttributes({match:val});
 		}
-
-		return [
-			el(
-				InspectorControls,
-				{ key: 'controls' },
-				el(
-					"input",
-					{
-						type: "text",
-						value: props.attributes.match,
-						onChange: onChangeMatch
-					}
-				)
-			),
-		];
+		return el(
+			wp.components.TextControl,
+			{
+					label: 'Event URL like so: tournament/silver-state-smash-2-5/event/ultimate-singles',
+					value: props.attributes.match,
+					onChange: updateVal
+			}
+		);
 	},
 	save: function( props ) {
+		SmashGG_RequestMatch(props.attributes.match);
+		var id = props.attributes.match;
+		id = id.replace(/[^-_a-zA-Z]/g, '');
 		return el(
 			"h3",
 			{style: {border: "3px solid red"}},
-			SmashGG_RequestMatch(props.attributes.match)
+			jQuery('#SmashGG' + id).val()
 		);
 	},
 })

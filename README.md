@@ -1,3 +1,4 @@
+
 # smash.gg-wordpress-plugin
 A Wordpress plugin that adds a Glutenberg block for smash.gg
 
@@ -14,7 +15,6 @@ A Wordpress plugin that adds a Glutenberg block for smash.gg
    - Once you have that, on the admin dashboard go to Settings, smash.gg plugin, and paste in your API key there. And save. Obviously.
 5. Use it in a post
    - The block is located under "Embeds" and is named "smash.gg"
-   - ***NOTE: AT IT'S CURRENT STATE, THIS PLUGIN DOESN'T DO JACK SHIT.*** The most you can do at the moment is place the block down, try and input something, then convert it to HTML. Since for some reason this thing doesn't save properly.
 6. ???
 7. Profit!
 

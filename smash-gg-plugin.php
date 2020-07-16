@@ -112,12 +112,6 @@ class APISettings {
 if ( is_admin() )
 	$api_settings = new APISettings();
 
-// Add Access-Control-Allow-Origin header (to allow POST requests)
-function add_cors_http_header(){
-    header("Access-Control-Allow-Origin: *");
-}
-add_action('init','add_cors_http_header');
-
 // Enqueue + Localize POST request functions
 wp_enqueue_script('smash-gg-requests', plugin_dir_url(__FILE__) . 'requests.js', "1.0", false);
 $options = get_option('api_settings_option_name');
