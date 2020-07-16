@@ -12,7 +12,7 @@ A Wordpress plugin that adds a Glutenberg block for smash.gg
 3. Activate the plugin
 4. Configure
    - This plugin requires an API key from smash.gg, which you can get [here.](https://smash.gg/admin/profile/developer)
-   - Once you have that, on the admin dashboard go to Settings, smash.gg plugin, and paste in your API key there. And save. Obviously.
+   - Once you have that, on the admin dashboard go to smash.gg API Settings, paste in your key and save.
 5. Use it in a post
    - The block is located under "Embeds" and is named "smash.gg"
 6. ???
