@@ -6,7 +6,7 @@
 Plugin Name: smash.gg Plugin
 Plugin URI: http://ggtylerr.digital/smash-gg-plugin
 Description: Plugin for smash.gg integration.
-Version: 0.2.0
+Version: 1.0.0
 Author: ggtylerr
 Author URI: http://ggtylerr.digital/
 License: GPL v2 or Later
@@ -103,7 +103,7 @@ class APISettings {
 
 	public function api_key_0_callback() {
 		printf(
-			'<input class="regular-text" type="text" name="api_settings_option_name[api_key_0]" id="api_key_0" value="%s">',
+			'<input class="regular-text" autocomplete="false" data-lpignore="true" type="password" name="api_settings_option_name[api_key_0]" id="api_key_0" value="%s">',
 			isset( $this->api_settings_options['api_key_0'] ) ? esc_attr( $this->api_settings_options['api_key_0']) : ''
 		);
 	}

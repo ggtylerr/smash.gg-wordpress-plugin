@@ -5,6 +5,9 @@ function SmashGG_RequestMatch(matchID) {
 		"query": `
 		query EventStandings($event: String!, $page: Int!, $perPage: Int!) {
 			event(slug: $event) {
+				tournament {
+					name
+				}
 				slug
 				name
 				standings(query: {
@@ -14,7 +17,6 @@ function SmashGG_RequestMatch(matchID) {
 					nodes {
 						placement
 						entrant {
-							id
 							name
 						}
 					}
@@ -25,7 +27,7 @@ function SmashGG_RequestMatch(matchID) {
 		"variables": {
 			"event": matchID,
 			"page": 1,
-			"perPage": 3
+			"perPage": 5
 		}
 	};
 	
@@ -50,12 +52,12 @@ function SmashGG_RequestMatch(matchID) {
 				jQuery("<p>").attr({
 					type: 'hidden',
 					id: 'SmashGG' + safe,
-					value: d.data.event.name
+					value: d
 				}).appendTo('body');
 			}
 			// If we already made a tag, just update it
 			else {
-				jQuery("#SmashGG" + safe).val(d.data.event.name);
+				jQuery("#SmashGG" + safe).val(d);
 			}
 		}
 	});
