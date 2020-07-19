@@ -6,7 +6,7 @@
 Plugin Name: smash.gg Plugin
 Plugin URI: http://ggtylerr.digital/smash-gg-plugin
 Description: Plugin for smash.gg integration.
-Version: 1.0.0
+Version: 1.1.0
 Author: ggtylerr
 Author URI: http://ggtylerr.digital/
 License: GPL v2 or Later
