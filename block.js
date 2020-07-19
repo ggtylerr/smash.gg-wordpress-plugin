@@ -68,55 +68,31 @@ wp.blocks.registerBlockType('smash-gg-plugin/smash-block', {
 			var standings = d.data.event.standings.nodes;
 			return el(
 				"div",
-				{style: {border: "1px solid black", backgroundColor: "white"}},
+				{style: {border: "1px solid black", backgroundColor:"rgb(37,46,55)",backgroundImage: "url(https://images.smash.gg/home-page/background.svg)"}},
 				el (
 					"h4",
-					{style: {textAlign: "center", margin: "2rem auto 0.5rem",fontFamily:"\"Roboto\",sans-serif"}},
+					{style: {textAlign: "center", margin: "2rem auto 0.5rem",fontFamily:"\"Roboto\",sans-serif",color:"white"}},
 					d.data.event.tournament.name
 				),
 				el (
 					"h6",
-					{style: {textAlign: "center", margin: "0.5rem auto 2rem", textTransform: "none",fontFamily:"\"Roboto\",sans-serif"}},
+					{style: {textAlign: "center", margin: "0.5rem auto 2rem", textTransform: "none",fontFamily:"\"Roboto\",sans-serif",color:"white"}},
 					d.data.event.name
 				),
 				el(
-					"hr",
-					{style: {
-						margin: "2rem auto 0rem", 
-						background: "none", 
-						border: "0px solid black",
-						borderTopWidth: "1px",
-						overflow: "hidden"
-					}}
-				),
-				el(
 					"table",
-					{style: {width: "100%",borderColor:"grey",margin:"0rem",fontFamily:"\"Roboto\",sans-serif"}},
+					{style: {width: "100%",backgroundColor:"white",backgroundImage:"none",borderCollapse:"collapse",margin:"0rem",fontFamily:"\"Roboto\",sans-serif",border:"none"}},
 					el(
 						"tr",
 						"",
 						el(
 							"th",
-							{style: {textAlign: "center"}},
-							"#"
-						),
-						el(
-							"th",
-							"",
-							"Name"
-						)
-					),
-					el(
-						"tr",
-						"",
-						el(
-							"th",
-							{style: {textAlign: "center"}},
+							{style: {textAlign: "center",backgroundColor:"rgb(29,75,160)",color:"white",border:"none"}},
 							standings[0].placement
 						),
 						el(
 							"th",
-							"",
+							{style:{border:"none"}},
 							standings[0].entrant.name
 						)
 					),
@@ -125,12 +101,12 @@ wp.blocks.registerBlockType('smash-gg-plugin/smash-block', {
 						"",
 						el(
 							"th",
-							{style: {textAlign: "center"}},
+							{style: {textAlign: "center",backgroundColor:"rgb(35,46,102)",color:"white",border:"none"}},
 							standings[1].placement
 						),
 						el(
 							"th",
-							"",
+							{style: {backgroundColor:"rgba(38,46,55,0.05)",border:"none"}},
 							standings[1].entrant.name
 						)
 					),
@@ -139,12 +115,12 @@ wp.blocks.registerBlockType('smash-gg-plugin/smash-block', {
 						"",
 						el(
 							"th",
-							{style: {textAlign: "center"}},
+							{style: {textAlign: "center",backgroundColor:"rgb(29,75,160)",color:"white",border:"none"}},
 							standings[2].placement
 						),
 						el(
 							"th",
-							"",
+							{style:{border:"none"}},
 							standings[2].entrant.name
 						)
 					),
@@ -153,12 +129,12 @@ wp.blocks.registerBlockType('smash-gg-plugin/smash-block', {
 						"",
 						el(
 							"th",
-							{style: {textAlign: "center"}},
+							{style: {textAlign: "center",backgroundColor:"rgb(35,46,102)",color:"white",border:"none"}},
 							standings[3].placement
 						),
 						el(
 							"th",
-							"",
+							{style: {backgroundColor:"rgba(38,46,55,0.05)",border:"none"}},
 							standings[3].entrant.name
 						)
 					),
@@ -167,19 +143,19 @@ wp.blocks.registerBlockType('smash-gg-plugin/smash-block', {
 						"",
 						el(
 							"th",
-							{style: {textAlign: "center"}},
+							{style: {textAlign: "center",backgroundColor:"rgb(29,75,160)",color:"white",border:"none"}},
 							standings[4].placement
 						),
 						el(
 							"th",
-							"",
+							{style:{border:"none"}},
 							standings[4].entrant.name
 						)
 					)
 				),
 				el(
 					"a",
-					{href: "https://smash.gg/" + d.data.event.slug, style:{whiteSpace: "normal",color:"red",fontFamily:"\"Roboto\",sans-serif"}},
+					{href: "https://smash.gg/" + d.data.event.slug, style:{display:"block",backgroundColor:"white",backgroundImage:"none",whiteSpace: "normal",color:"red",fontFamily:"\"Roboto\",sans-serif"}},
 					el(
 						"img",
 						{src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/SmashBall.svg/240px-SmashBall.svg.png", width: 30, style:{display:"inline"}}
